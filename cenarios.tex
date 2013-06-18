@@ -1,0 +1,102 @@
+
+%{\color{red}
+%• Uma lista de cenários para os quais se imagina que a aplicação poderá ser aplicada, 
+%detalhando 2 cenários principais. }
+
+Um cenário é uma narrativa, a qual descreve todas as interações do usuário
+com o sistema durante uma atividade.
+Neste trabalho, o objetivo dos cenários é auxiliar a análise de
+requisitos funcionais e operacionais do sistema.  Cada cenário descreve como um
+sistema deve ser utilizado em um contexto de uma atividade em um prazo de 
+tempo definido, sendo que as sub-seções \ref{cenario1} e \ref{cenario2}
+descrevem cenários mais detalhados, enquanto que a sub-seção 
+\ref{cenario3} descreve um
+cenário razoavelmente a alto nível, focando mais em ações feitas ao invés
+de operações realizadas a partir de cada ação.
+
+\subsection{Cenário 1} \label{cenario1}
+
+Cenário: Uma tentativa bem sucedida de busca de um produto a partir da
+foto da câmera interna do \emph{smartphone}, a qual é utilizada para
+tirar uma foto da capa de um livro de interesse do usuário.  O dispositivo
+já está conectado à uma rede WiFi.
+
+\begin{enumerate}
+\item O usuário inicia a função de câmera;
+\item A capa do livro é posicionada de forma aproximadamente ortogonal;
+\item O usuário tira uma foto da capa do livro;
+\item A foto recém realizada é mostrada ao usuário;
+\item O usuário seleciona a opção ``compartilhar'';
+\item A opção ``Doutor Pecúlio'' aparece nas opções de compartilhamento,
+    a qual é escolhida pelo usuário;
+\item O aplicativo ``Doutor Pecúlio'' é iniciado em uma tela onde a foto
+    é mostrada escurecida em segundo plano e em primeiro plano é mostrada uma
+    mensagem informando que a busca está em andamento;
+\item Internamente, como já há conexão estabelecida com a \emph{internet}, o
+    algoritmo responsável pelo processamento da imagem é iniciado para identificar
+    se a foto é uma capa ou um código de barras ou QR.  O algoritmo identifica que 
+    é uma capa e então um segundo algoritmo é executado para criar uma
+    identificação única (\emph{hash}) da imagem.   O identificador único é
+    utilizado para realizar uma consulta em um servidor dedicado ao aplicativo,
+    o qual irá retornar possíveis resultados.  Neste caso, apenas um resultado
+    foi encontrado os resultados para aquele título é retornado ao aplicativo.
+\item Em aproximadamente três segundos os resultados do livro começam 
+    aparecer em uma tela onde mostra a capa \emph{online} do livro e
+    resultados encontrados.  Ao lado da capa, o título encontrado é apresentado,
+    e logo abaixo a avaliação dos usuários é pela quantidade de estrelas.
+    Os resultados são divididos em lojas virtuais
+    e lojas locais.  As lojas locais são organizadas em ordem crescente de
+    distância e preço, mostradas na tela do usuário.   O usuário pode acessar
+    todos os resultados \emph{online} a partir de uma opção mostrada depois
+    do título e antes dos resultados locais.    
+\end{enumerate}
+
+\subsection{Cenário 2} \label{cenario2}
+
+
+Cenário: Uma tentativa mal sucedida de busca de um produto a partir da
+foto da câmera interna do \emph{smartphone}, a qual é utilizada para
+tirar uma foto do código de barras de um DVD de interesse do usuário.  O dispositivo
+já está conectado à uma rede WiFi.
+
+\begin{enumerate}
+\item O usuário inicia a função de câmera;
+\item O código de barras é posicionado de forma aproximadamente ortogonal;
+\item O usuário tira uma foto;
+\item A foto recém realizada é mostrada ao usuário;
+\item O usuário seleciona a opção ``compartilhar'';
+\item A opção ``Doutor Pecúlio'' aparece nas opções de compartilhamento,
+    a qual é escolhida pelo usuário;
+\item O aplicativo ``Doutor Pecúlio'' é iniciado em uma tela onde a foto
+    é mostrada escurecida em segundo plano e em primeiro plano é mostrada uma
+    mensagem informando que a busca está em andamento;
+\item Internamente, como já há conexão estabelecida com a \emph{internet}, o
+    algoritmo responsável pelo processamento da imagem é iniciado para identificar
+    se a foto é uma capa ou um código de barras ou QR.  O algoritmo identifica que 
+    é um código de barras e então um segundo algoritmo é executado para ler o
+    código de barras da imagem.   O código de barras é
+    utilizado para realizar uma consulta em um servidor dedicado ao aplicativo,
+    o qual irá retornar os resultados.  Porém, este DVD ainda não está disponível
+    pelas APIs.  O servidor retorna um erro; e
+\item Em aproximadamente três segundos a mensagem de erro é mostrada com a
+    foto em segundo plano e em primeiro plano é mostrada uma mensagem mostrando
+    que o item não foi encontrado.  O usuário tem a opção de poder realizar 
+    uma novo foto ou cancelar a operação de busca.
+\end{enumerate}
+
+\subsection{Cenário 3} \label{cenario3}
+
+Cenário: Acesso à uma busca já realizada anteriormente.  O dispositivo
+não precisa estar conectado à WiFi.
+
+\begin{enumerate}
+\item O usuário inicia o aplicativo ``Doutor Pecúlio'';
+\item A tela de consultas já realizada é mostrada ao usuário.  Os
+    resultados bem sucedidos são mostrados de forma agrupada por tipo 
+    de produto consultado, como Livro, DVD e Jogos;
+\item O usuário seleciona um resultado de uma busca anterior; e
+\item Os mesmos resultados utilizados na busca anterior são mostrados,
+    e uma opção de atualizar os resultados é mostrada para que ele possa
+    buscar por novos preços e disponibilidade na localidade atual do
+    usuário.
+\end{enumerate}

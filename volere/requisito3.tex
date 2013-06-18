@@ -1,0 +1,82 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TEMPLATE VOLERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par \noindent
+\begin{table}[h]
+    \begin{tabularx}{\textwidth}{
+        p{\dimexpr.18\linewidth-2\tabcolsep-1.3333\arrayrulewidth}
+        p{\dimexpr.1\linewidth-2\tabcolsep-1.3333\arrayrulewidth}
+        p{\dimexpr.24\linewidth-2\tabcolsep-1.3333\arrayrulewidth}
+        p{\dimexpr.14\linewidth-2\tabcolsep-1.3333\arrayrulewidth}
+        p{\dimexpr.255\linewidth-2\tabcolsep-1.3333\arrayrulewidth}
+        p{\dimexpr.1\linewidth-2\tabcolsep-1.3333\arrayrulewidth}
+    }
+    \toprule
+        \textbf{Requisito \#:}          & 3
+        & \textbf{Tipo de requisito:}   & 1
+        & \textbf{Evento/PUC/BUC:}      & 1 \\
+    \midrule
+    \end{tabularx}
+    \vspace{5pt}
+    \begin{tabularx}{\textwidth}{p{.12\textwidth}  p{.83\textwidth}}
+        \textbf{Descrição:} &
+        Integração com a API GeoIP.
+    \end{tabularx}
+    
+    \vspace{5pt}
+    \begin{tabularx}{\textwidth}{p{.12\textwidth}  p{.83\textwidth}}
+        \textbf{Razão:} &
+        Obter informação da localização atual do usuário,
+        utilizando a API GeoIP.
+    \end{tabularx}
+    
+    \vspace{5pt}
+    \begin{tabularx}{\textwidth}{p{.12\textwidth} p{.83\textwidth}}
+        \textbf{Origem:} &
+        Lucas.
+    \end{tabularx}
+    
+    \vspace{5pt}
+    \begin{tabularx}{\textwidth}{p{.23\textwidth} p{.72\textwidth}}
+        \textbf{Critério de ajuste:} &
+        O aplicativo deve ter acesso a informação do identificador
+        IP da conexão atual do \emph{smartphone} para poder,
+        através do GeoIP, descobrir a localização atual e então
+        utilizar como critério de busca de catálogos de lojas
+        próximas.
+    \end{tabularx}
+    
+    \vspace{5pt}
+    \begin{tabularx}{\textwidth}{p{.26\textwidth}p{.248\textwidth}
+                                 p{.28\textwidth}p{.110\textwidth}}
+        \textbf{Satisfação do cliente:} & -- & 
+        \textbf{Insatisfação do cliente:} & --
+    \end{tabularx}
+    
+    \vspace{5pt}
+    \begin{tabularx}{\textwidth}{p{.17\textwidth}p{.5\textwidth}
+                                 p{.12\textwidth}p{.101\textwidth}}
+        \textbf{Dependências:} & Conseguir adquirir o endereço de IP da
+        conexão atual.
+        & \textbf{Conflitos:} & -- \\
+    \end{tabularx}
+    
+    \vspace{5pt}
+    \begin{tabularx}{\textwidth}{p{.235\textwidth} p{.715\textwidth}}
+        \textbf{Materiais de apoio:} &
+       Documentação da API do GeoIP.
+    \end{tabularx}
+    
+    \vspace{5pt}
+    \begin{tabularx}{\textwidth}{p{.1\textwidth} p{.85\textwidth}}
+        \textbf{História:} &
+        Criado em 12 de Junho de 2012. \\
+    \end{tabularx}
+    
+    \begin{tabularx}{\textwidth}{c}
+        \bottomrule
+    \end{tabularx}
+    
+    \caption{ \label{Volere3} Requisito no modelo de Volere. }
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

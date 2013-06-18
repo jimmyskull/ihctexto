@@ -1,0 +1,142 @@
+
+% Em algum momento da introduçào me baseei nisso
+% http://people.csail.mit.edu/pcm/tempISWC/workshops/SERES2010/seres10_submission_2.pdf
+
+Somos a sociedade da informação, termo utilizado por
+\citeonline{beniger1986control} para referir-se à 
+sociedade moderna e seu gradual desejo de controle e consumo da 
+informação, desejo este que motivou o
+desenvolvimento rápido de tecnologias para o \textit{feedback} automático
+em processos industriais, logo no início do período industrial.
+
+Em discussões sobre a sociedade moderna baseadas na dialética do antigo e do novo,
+do continuado e do descontinuado, termos como 
+capitalismo digital \cite{citeulike:8018090} e
+capitalismo virtual \cite{VirtualCapitalism} mostram claramente como
+os sistemas computacionais tornaram-se o foco no desenvolvimento tecnológico,
+refletindo na criação de uma nova rede cultural e social generalizada, com 
+alcance mundial, impactando em uma economia capitalista globalizada.
+
+\citeonline{DBLP:journals/corr/abs-1111-6849} indicam que a geração
+de informação cresce exponencialmente.  Como resultado, as pessoas
+se veem sobrecarregadas com o volume de informações publicadas em uma
+pletora de novos livros e páginas na \textit{internet}, entre outros.  Além disso,
+avanços tecnológicos reduziram formidavelmente as barreiras na publicação
+e distribuição de informação, através de meios eletrônicos, aumentando a 
+dimensão da quantidade de publicações produzidas \cite{rao2008application}.
+
+Na tentativa de amenizar problema do sobrecarregamento de informações e
+tentar converter todas as fontes de informação disponíveis em dados úteis,
+surgiu o assistente pessoal inteligente (IPA, do inglês \textit{Intelligent
+Personal Assistant}) como uma solução factível para auxiliar os usuários
+em diferentes domínios de aplicações.
+
+\subsection{Assistente pessoal inteligente}
+
+%{\color{red}
+%• Uma descrição sucinta sobre o que você entende por Assistente Pessoal Inteligente 
+%para Dispositivos Móveis de forma a definir o escopo de seu projeto. }
+
+Um assistente pessoal inteligente é um agente de \textit{software}
+que pode realizar tarefas e serviços para um indivíduo, baseado na
+entrada do usuário, como a localização atual e a habilidade para
+acessar informações de uma variedade de informações na \textit{internet}, como
+condições atuais do clima, do tráfego, notícias, ações, agenda do
+usuário e preços de varejo, entre outros \cite{kaschek2007intelligent}.
+Exemplos de tais sistemas incluem Google Now \cite{GoogleNow} e 
+Siri \cite{Siri}.   Segundo \citeonline{garridoadding}, estes agentes devem 
+ser capazes de comunicar, cooperar, discutir com pessoas e também 
+guiá-las.
+
+A tecnologia por trás dos assistentes pessoais inteligentes envolve a integração
+de dispositivos móveis com \textit{Application Programming Interfaces} (APIs)
+públicas,
+popularizadas com a proliferação de aplicativos móveis.  
+Assistentes inteligentes autônomos são projetados para realizar tarefas
+específicas de modo simples através de instruções dadas pelo usuário,
+como comandos de voz, redirecionando ações à outros agentes inteligentes,
+especializados em realizar tarefas específicas.
+
+Nosso trabalho é voltado ao desenvolvimento da prévia de um agente 
+inteligente, especializado em consultar preços de objetos em lojas virtuais
+e próximas da localização atual do usuário.
+
+\subsection{Doutor Pecúlio}
+
+Doutor Pecúlio é o nome dado ao aplicativo resultante deste trabalho, o qual
+tem o objetivo de agilizar o processo do usuário em consultar preços.
+Para interagir, o usuário deve tirar uma foto de um item, que pode ser
+por exemplo, a capa de um livro, o código de barras ou o seu código
+QR (do inglês, \textit{Quick Response code}).  Em todos os casos, 
+necessita-se que o aplicativo
+tenha acesso à uma câmera.   O aplicativo é voltado para funcionar com
+livros, CDs, DVDs, Blu-ray, mídias para PCs e mídas para consoles de 
+\textit{videogame}.
+
+Para uma consulta, precisa-se apenas tirar uma foto da capa do objeto com o 
+\textit{smartphone}, ativando a função de câmera.  O usuário pode acessar a
+câmera externamente ao programa ou através do menu principal do Doutor Pecúlio.
+Com a câmera ativa, é necessário que o usuário alinhe a câmera com o objeto
+em uma perspectiva aproximadamente perpendicular.  Após tirar a foto, o 
+usuário verifica se a foto ficou boa o suficiente para identificar qual é o
+objeto e então inicia a busca.   Para iniciar a busca, existem duas situações.
+Se o usuário iniciou a câmera fora do aplicativo, ele deve escolher a opção
+de compartilhar a imagem com o Doutor Pecúlio. Porém, se o usuário iniciou
+a câmera através do menu do aplicativo, uma opção de confirmar, ou utilizar, a
+foto deve ser selecionada.  O aplicativo irá procurar o objeto na 
+\textit{internet}, através de uma conexão \textit{Wi-Fi}, onde a consulta
+deve ter uma duração aproximada de dois a três segundos antes que os 
+resultados comecem a ser mostrados.
+
+Uma vez que uma consulta é realizada com sucesso, o usuário terá acesso
+a comentários de avaliações feitos por outros usuários, em \textit{sites} como 
+Amazon e Submarino.   Os resultados são ordenados em ordem crescente, sendo
+o critério principal o preço do produto e, o secundário, a distância do local, caso o 
+resultado seja de uma loja próxima.    Para resultados de lojas locais, 
+também são apresentadas direções para chegar e números de telefone, sempre
+que possível.
+
+\subsection{Motivação}
+
+Atualmente
+existem vários aplicativos móveis que possibilitam a busca de um 
+item para consulta e comparação com outras lojas.  Entretanto, muitos necessitam
+da entrada manual do usuário, como por exemplo para livros, pode ser
+necessário a entrada do identificador ISBN, o autor, o título e
+frequentemente detalhes como a
+edição do livro que deseja-se consultar.
+
+Com o grande esforço presente na área de pesquisa de visão computacional
+relacionados à Recuperação de Imagens Baseada em Conteúdo (CBIR,
+do inglês \textit{Content-Based Image Retrieval}) e
+Recuperação e Indexação de Imagens Baseada em Conceitos Implícitos (ICIIR,
+do inglês, \textit{Implicit Concept-Based Image Indexing and Retrieval}), 
+já é possível realizar buscas rápidas por imagens semelhantes em bancos de 
+dados grandes, como discutido em \citeonline{jsrgensen2003image},
+\citeonline{1265007}, \citeonline{Datta:2008:IRI:1348246.1348248}
+e \citeonline{Rui199939}.
+\citeonline{Petrakis1993504} discutem os requisitos de \textit{design} e
+implementação de um banco de dados de imagens de um sistema que suporta
+o armazenamento e recuperação de imagens pelo conteúdo presente nas imagens.
+
+Através destes estudos, acreditamos que seja possível a elaboração de um 
+agente inteligente rápido e eficiente, que atenda o usuário de forma 
+natural, adequado aos conceitos apresentados por \citeonline{kaschek2007intelligent}, 
+sem a necessidade de entrada
+manual da descrição do objeto para realizar consultas, almejando ser confortável
+e satisfatório ao usuário.
+
+\subsection{Público-alvo}
+
+O usuário que deverá se sentir satisfeito com a usabilidade do aplicativo
+é aquele que possui um \textit{smartphone} moderno, com integração à câmera
+e conexão \textit{Wi-Fi}.   Imagina-se que este usuário utilizará o
+aplicativo em situações corriqueiras, onde o agente causará pouco impacto
+na necessidade de atenção ao usuário para sua operação.
+
+% %%
+%
+%  Atenção: desperdiçando uma referencia passada pela professora:
+%   \cite{Rocha}
+% %%
+  
